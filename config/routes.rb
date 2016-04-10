@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'welcome/index'
   get 'welcome/switch_role/:role' => 'welcome#switch_role'
   resources :appointments
