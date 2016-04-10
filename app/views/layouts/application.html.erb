@@ -14,6 +14,12 @@
       <%= link_to "Doctors", doctors_path %> &nbsp;&nbsp;&nbsp;&nbsp;
       <%= link_to "Pets", pets_path %> &nbsp;&nbsp;&nbsp;&nbsp;
       <%= link_to "Appointments", appointments_path %> &nbsp;&nbsp;&nbsp;&nbsp;
+	  
+     <%if user_signed_in? %>
+	    <%= link_to 'Logout',  destroy_user_session_path , :method => :delete%>
+	 <%else%>
+	    <%= link_to 'Log In',  user_session_path %>
+    <%end%>		  
 	</div>
 <div class="container">
   <% flash.each do |key, value| %>
@@ -29,7 +35,6 @@
     <h1><%= yield :header %></h1>
   <%= yield %>
 </div>
-	<div id="footer"> (c) For RackSpace evaluation</div>
 
   </div>
 </body>

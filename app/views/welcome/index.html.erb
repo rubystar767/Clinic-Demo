@@ -1,4 +1,4 @@
-<h1>Welcome#index</h1>
+<%if !user_signed_in? %>
 <% content_for :top_content do %>
   <div class="jumbotron">
     <div class="container">
@@ -10,7 +10,7 @@
     </div>
   </div>
 <% end %>
-
+<%end%>
 
 
 
