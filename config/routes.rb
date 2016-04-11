@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
   get 'welcome/switch_role/:role' => 'welcome#switch_role'
+  get 'welcome/user_roles' => "welcome#user_roles"
+  post 'welcome/map_user_roles/:user_id' => "welcome#map_user_roles"
+  
   resources :appointments
   resources :pets
   resources :doctors

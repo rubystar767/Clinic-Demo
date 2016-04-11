@@ -9,3 +9,7 @@
 Doctor.create([{name:"Owner", address:"12, Street Name", city: "Fargo",state:"North Dakota", zip:12345, certified_by:"MIT", experience:12},{name:"Bob", address:"12, Street Name", city: "Fargo",state:"North Dakota", zip:12345, certified_by:"MIT", experience:12},{name:"Susan", address:"12, Street Name", city: "Fargo",state:"North Dakota", zip:12346, certified_by:"MIT", experience:18}])
 
 Pet.create([{name:"Scooby", breed:"Great Dane", pet_type:"dog", age:12, weight:45, last_appointment:2015/12/12},{name:"Garfield", breed:"Exotic", pet_type:"cat", age:12, weight:45, last_appointment:2015/12/12}])
+
+['doctor', 'patient', 'receiptionist', 'admin'].each do |role|
+  Role.find_or_create_by({name: role})
+end

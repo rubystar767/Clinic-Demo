@@ -2,6 +2,7 @@ class WelcomeController < ApplicationController
   def index
   end
   
-  def session_roles
+  def user_roles
+    
   end
 end
